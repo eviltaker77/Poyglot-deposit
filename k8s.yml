@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: service-polyglot
-        image: antony0618/servicenet6:latest
+        image: eviltaker77/devops-jenkins:latest
         ports:
         - containerPort: 80 #change port value 8080 on microservice development
         imagePullPolicy: Always
