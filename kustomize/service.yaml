@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: service-polyglot
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80 # same to line 21
+    name: http

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: service-polyglot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-polyglot
+  template:
+    metadata:
+      labels:
+        app: service-polyglot
+    spec:
+      containers:
+      - name: service-polyglot
+        image: crpolyglotlzo.azurecr.io/appdeposit:latest
+        ports:
+        - containerPort: 80 #change port value 8080 on microservice development
+        imagePullPolicy: Always
+---
